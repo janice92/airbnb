@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<h1>liste des taches</h1>
+<ul>
+@forelse ($tasks as $task)
+<li>{{ $task->title}},
+utilisateur: {{ $task->user->name}}</li>
+@empty
+<li>aucune tache</li>
+@endforelse
+</ul>
 <h1>formulaire</h1>
 @if (count($errors) >0)
 <ul>
@@ -10,7 +19,7 @@
 @endforeach
  </ul>
  @endif
- <form method="POST" action="{{route('task.store')}}">
+  <form action="{{url('/task')}}" method="post">
     {{csrf_fiel()}}
     <input type="text" name="title" placeholder="titre">
     <br>

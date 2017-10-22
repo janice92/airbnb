@@ -17,7 +17,7 @@ class isAdmin
     public function handle($request, Closure $next)
     {
         if (Auth::check()
-            && Auth::user()->email == "admin@test.fr"){
+            && Auth::user()->email == "h@test.fr"){
         return $next($request);
     }
     return redirect('home');
