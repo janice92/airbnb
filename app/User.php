@@ -21,6 +21,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+<<<<<<< HEAD
 
    public function profile() {
         return $this->hasOne('App\Profile');
@@ -29,3 +30,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Task');
     }
 }
+=======
+    public function annonces() {
+        return $this->hasMany('App\Annonce');
+    }
+}
+>>>>>>> origin/master
