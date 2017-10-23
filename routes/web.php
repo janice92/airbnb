@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
    
         });
 
-Route::get('tests', 'MessageController@tests');
+
 
 Route::get('/home', 'HomeController@index');
 Route::get('/post', 'PostController@index');
@@ -44,7 +44,6 @@ Route::get('/category', 'CategoryController@index');
 Route::post('/category', 'CategoryController@store');
 Route::get('/post/category/{name}', 'CategoryController@showAll')->name('category.showAll');
 
-Route::get('message/{id}', 'MessageController@chatHistory')->name('message.read');
 Route::get('/profile/edit/profile', [
         'uses' => 'ProfilesController@edit',
         'as' => 'profile.edit'
@@ -80,10 +79,7 @@ Route::get('home/searchredirect', function(){
 });
 Route::get("home/search/{search}", "HomeController@search");
 
-Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
-   Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
-   Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
-});
+
 
 Route::get('/annonces','AnnonceController@index');
 Route::post('/annonces', 'AnnonceController@store')->middleware('auth');
