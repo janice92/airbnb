@@ -66,7 +66,7 @@ Route::get("home/search/{search}", "HomeController@search");
 
 Route::get('/profile/{username}', 'ProfilesController@profile'); 
 Route::get('/task', 'TaskController@index');
-<<<<<<< HEAD
+
 Route::post('/task', 'TaskController@store')->middleware('auth');
 
 Route::get('home/searchredirect', function(){
@@ -84,7 +84,6 @@ Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
    Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
    Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
 });
-=======
 
 Route::get('/annonces','AnnonceController@index');
 Route::post('/annonces', 'AnnonceController@store')->middleware('auth');
@@ -92,6 +91,5 @@ Route::get('/annonces/{id}', 'AnnonceController@show')->name('annonce.show')->mi
 Route::get('/annonces/{id}/edit', 'AnnonceController@edit')->name('annonce.edit')->middleware('auth');
 Route::put('/annonces/{id}/edit', 'AnnonceController@update')->name('annonce.update')->middleware('auth');
 Route::delete('/annonces/{id}/delete', 'AnnonceController@destroy')->name('annonce.delete')->middleware('auth');
->>>>>>> origin/master
 
 

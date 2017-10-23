@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Annonce;
+use Image;
+
 
 use App\Task;
 use Illuminate\Http\Request;
@@ -27,17 +29,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('home', compact('users'));
+        $annonces = Annonce::all();
+        return view('home', compact('annonces'));
     }
     public function search($search){
         $search = urldecode($search);
-        $users = User::select()
-                ->where('name', 'LIKE', '%'.$search.'%')
+        $annonces = Annonce::select()
+                ->where('title', 'LIKE', '%'.$search.'%')
                 ->orderBy('id', 'desc')
                 ->get();
 
-        return view('home', compact('users'));
+        return view('home', compact('annonces'));
  
     }
 }

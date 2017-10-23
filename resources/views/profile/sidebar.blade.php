@@ -11,14 +11,14 @@
                        {{Auth::user()->name}}</a>
                      </li>
                      <li>
-                       <a href="{{url('/feed')}}"> <img src="{{Config::get('app.url')}}/public/img/news_feed.png"
+                       <a href="{{url('/annonces')}}"> <img src="{{Config::get('app.url')}}/public/img/news_feed.png"
                        width="32" style="margin:5px"  />
-                       Mes annonces</a>
+                      Posté une annonce</a>
                      </li>
                      <li>
                        <a href="{{url('/home')}}"> <img src="{{Config::get('app.url')}}/public/img/friends.png"
                        width="32" style="margin:5px"  />
-                       Annonces</a>
+                       Toutes les Annonces</a>
                      </li>
 
                      <li>

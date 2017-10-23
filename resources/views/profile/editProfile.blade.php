@@ -41,12 +41,12 @@
                             <div class="col-md-6">
 
                                 <div class="input-group">
-                                    <span  id="basic-addon1">City Name</span>
+                                    <span  id="basic-addon1">Ville</span>
                                     <input type="text" class="form-control" placeholder="City Name" name="city" value="{{$data->city}}">
                                 </div>
                                 <br>
                                 <div class="input-group">
-                                    <span  id="basic-addon1">Country Name</span>
+                                    <span  id="basic-addon1">Pays</span>
                                     <input type="text" class="form-control" placeholder="Country Name" name="country" value="{{$data->country}}">
                                 </div>
 
@@ -55,7 +55,7 @@
 
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <span  id="basic-addon1">About</span>
+                                    <span  id="basic-addon1">Description</span>
                                     <textarea type="text" class="form-control" name="about">{{$data->about}}</textarea>
                                 </div>
 

@@ -181,110 +181,7 @@
     </section>
 
 
-    <div class="container">
-        <h1 class="heading-primary" style="color:#555;">Informations importantes</h1>
-        <div class="accordion">
-            <dl>
-                <dt>
-                    <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Qu'est-ce qu'un au pair ?</a>
-                </dt>
-                <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
-                    <p>Les jeunes au pair sont des jeunes gens entre 18 et 30 ans, célibataires et sans enfants, qui partent vivre pour un temps
-                        limité chez une famille d'accueil à l'étranger afin d'approfondir leurs connaissances linguistiques et culturelles.
-                        Le jeune au pair peut améliorer ses connaissances linguistiques dans la famille d'accueil, découvrir une autre culture et
-                        acquérir une expérience à l'étranger. En échange, le jeune au pair aide sa famille d'accueil en gardant les enfants et
-                        apporte un soutien dans les tâches ménagères légères.</p>
-                <dt>
-                    <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
-                        Temps de travail du jeune au pair</a>
-                </dt>
-                <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
-                    <p>Dans de nombreux pays d'accueil, le temps de travail maximal des jeunes au pair est fixé par la législation en vigueur.
-                        En règle générale, nous recommandons que le jeune au pair ne travaille pas plus de 30 heures par semaine (babysitting inclus) ;
-                        exception faite des États-Unis, où les jeunes au pair travaillent maximum 45 heures par semaine.</p>
-
-                    <p>Concernant le temps de travail, une certaine flexibilité est demandée aux deux parties.
-                        Il peut arriver que le jeune au pair soit amené à garder les enfants un peu plus longtemps que prévu ;
-                        il recevra en échange un week-end entier de libre..</p>
-                </dd>
-                <dt>
-                    <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
-                        Durée d'un séjour au pair </a>
-                </dt>
-                <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
-                    <p>Un séjour au pair est toujours limité dans le temps. La plupart des jeunes au pair restent au maximum
-                        une année dans une même famille. S'il n'existe pas de réglementation à ce sujet dans un pays d'accueil donné,
-                        la durée du séjour est à convenir ensemble.
-                        Il existe par exemple des jeunes au pair qui cherchent une famille d'accueil pendant leurs vacances d'été.</p>
-
-                </dd>
-            </dl>
-            
-        </div>
-        
-        <script>
-            (function(){
-                var d = document,
-                        accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
-                        setAria,
-                        setAccordionAria,
-                        switchAccordion,
-                        touchSupported = ('ontouchstart' in window),
-                        pointerSupported = ('pointerdown' in window);
-
-                skipClickDelay = function(e){
-                    e.preventDefault();
-                    e.target.click();
-                }
-
-                setAriaAttr = function(el, ariaType, newProperty){
-                    el.setAttribute(ariaType, newProperty);
-                };
-                setAccordionAria = function(el1, el2, expanded){
-                    switch(expanded) {
-                        case "true":
-                            setAriaAttr(el1, 'aria-expanded', 'true');
-                            setAriaAttr(el2, 'aria-hidden', 'false');
-                            break;
-                        case "false":
-                            setAriaAttr(el1, 'aria-expanded', 'false');
-                            setAriaAttr(el2, 'aria-hidden', 'true');
-                            break;
-                        default:
-                            break;
-                    }
-                };
-//function
-                switchAccordion = function(e) {
-                    console.log("triggered");
-                    e.preventDefault();
-                    var thisAnswer = e.target.parentNode.nextElementSibling;
-                    var thisQuestion = e.target;
-                    if(thisAnswer.classList.contains('is-collapsed')) {
-                        setAccordionAria(thisQuestion, thisAnswer, 'true');
-                    } else {
-                        setAccordionAria(thisQuestion, thisAnswer, 'false');
-                    }
-                    thisQuestion.classList.toggle('is-collapsed');
-                    thisQuestion.classList.toggle('is-expanded');
-                    thisAnswer.classList.toggle('is-collapsed');
-                    thisAnswer.classList.toggle('is-expanded');
-
-                    thisAnswer.classList.toggle('animateIn');
-                };
-                for (var i=0,len=accordionToggles.length; i<len; i++) {
-                    if(touchSupported) {
-                        accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
-                    }
-                    if(pointerSupported){
-                        accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
-                    }
-                    accordionToggles[i].addEventListener('click', switchAccordion, false);
-                }
-            })();
-        </script>
-    </div>
-
+    
 
 
 
@@ -309,7 +206,7 @@ do lab ore et dolore magna aliqua.</p>
    </div>
                     <div class="col-md-3"><h6>à propos</h6></div>
                 </div><!-- /.row -->
-                 <p class="copyright text-muted">Fait par Mette Janice & Le Pape Anne-Hélène - Lize</p>
+                 <p class="copyright text-muted">Fait par Mette Janice & melanie - Lize</p>
             </div>
 
         </div><!-- /.item -->

@@ -18,6 +18,8 @@ class CreateAnnoncesTable extends Migration
             $table->integer('user_id');
             $table->string('body');
             $table->string('title');
+            $table->string('categorie_id');
+             $table->string('image')->nullable();
             $table->timestamps();
 
         });
